@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_URL: https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -36,7 +36,7 @@ env:
 jobs:
   build:
   
-    name: Build K2P Firmware 22.03.5
+    name: Build K2P/R3G Firmware immortalwrt
 
     runs-on: ubuntu-20.04
 
@@ -173,7 +173,7 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 1
+        retain_days: 7
         keep_minimum_runs: 3
 
     - name: Remove old Releases
